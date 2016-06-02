@@ -1,0 +1,174 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background-color: #eee;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  justify-content: center;
+  padding: 0.5em;
+  margin: 0;
+}
+
+.schedules-container {
+  padding: 0;
+}
+
+.schedule {
+  padding: 0 1em;
+}
+
+.schedule-card {
+  width: 25em;
+  margin: 12em auto;
+  height: auto;
+  padding: 1em;
+}
+
+.schedule-title {
+  margin: 0 0.5em;
+}
+
+.icon {
+  margin: 0 !Important;
+}
+
+.save-container {
+  padding: 0 1em 1em;
+}
+
+.save {
+  float: right;
+  color: #FFF !Important;
+}
+
+.schedule-title-container:hover {
+  cursor: pointer;
+}
+
+.schedule-shifts {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.4s;
+  padding: 0.5em 2em 0em;
+}
+
+.schedule-shifts .days {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 3em;
+}
+
+.schedule-shifts .days label {
+  padding: 0 !Important;
+  width: 17px;
+  height: 0em;
+  transition: height 0.4s;
+}
+
+.schedule-shifts button {
+  align-self: flex-start;
+  padding: 0 8px;
+}
+
+.shift {
+  padding: 1em;
+}
+
+.shifts-active {
+  height: auto;
+}
+
+.shifts-active label {
+  height: 3em;
+}
+
+.label {
+  top: 20px;
+  right: 6px;
+  width: 35px;
+  text-align: center;
+}
+
+.fri {
+  width: 25px;
+  display: block;
+}
+
+.remove-schedule, .remove-shift {
+  height: 25px !Important;
+  min-width: 25px !Important;
+  width: 25px !Important;
+}
+
+.remove-schedule span, .remove-shift span {
+  line-height: 26px !Important;
+}
+
+.remove-shift {
+  float: right;
+  top: -0.5em;
+  left: 0.2em;
+}
+
+.slider-time {
+  margin: 0;
+}
+
+.ui-state-hover {
+  background: #03A9F4;
+  font-weight: normal;
+  color: #454545;
+  transition: scale 1s ease;
+  border: none;
+  outline: none;
+}
+
+.ui-state-active {
+  background: #03A9F4;
+  font-weight: normal;
+  color: #fff;
+  transform: scale(1.2);
+  border: none;
+  outline: none;
+}
+
+.ui-slider .ui-slider-handle {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  top: -0.5em;
+  border: none;
+  background-color: #03A9F4;
+  outline: none;
+}
+
+.ui-slider {
+  height: 0;
+  display: inline-block;
+  width: 12em;
+  padding: 1em;
+}
+
+.ui-widget-content {
+  border-top: 1px solid #BABABA;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.ui-slider-horizontal .ui-slider-range {
+  top: -1px;
+  height: 2px;
+  background-color: #03A9F4;
+}
