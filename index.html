@@ -31,6 +31,10 @@
           </button>
         </div>
       </div>
+      <div id="save" class="mdl-js-snackbar mdl-snackbar">
+        <div class="mdl-snackbar__text"></div>
+        <button class="mdl-snackbar__action" type="button"></button>
+      </div>
     </div>
 
     <script type="text/template" id="schedule-template">
@@ -46,34 +50,12 @@
       </div>
       <div class="schedule-shifts">
         <div class="days">
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
-            <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="mon" value="1" checked>
-            <span class="label mdl-checkbox__label">Mon</span>
-          </label>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-2">
-            <input type="checkbox" id="checkbox-2" class="mdl-checkbox__input" name="tue" value="2">
-            <span class="label mdl-checkbox__label">Tue</span>
-          </label>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-3">
-            <input type="checkbox" id="checkbox-3" class="mdl-checkbox__input" name="wed" value="2">
-            <span class="label mdl-checkbox__label">Wed</span>
-          </label>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-4">
-            <input type="checkbox" id="checkbox-4" class="mdl-checkbox__input" name="thu" value="2">
-            <span class="label mdl-checkbox__label">Thu</span>
-          </label>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-5">
-            <input type="checkbox" id="checkbox-5" class="mdl-checkbox__input" name="fri" value="2">
-            <span class="label fri mdl-checkbox__label">Fri</span>
-          </label>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-6">
-            <input type="checkbox" id="checkbox-6" class="mdl-checkbox__input" name="sat" value="2">
-            <span class="label mdl-checkbox__label">Sat</span>
-          </label>
-          <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-7">
-            <input type="checkbox" id="checkbox-7" class="mdl-checkbox__input" name="sun" value="2">
-            <span class="label mdl-checkbox__label">Sun</span>
-          </label>
+          <% _.each(data, function(day){ %>
+            <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for=<%= day.id%>>
+              <input type="checkbox" id=<%= day.id%> class="mdl-checkbox__input">
+              <span class='<%= day.fri%> label mdl-checkbox__label'><%= day.name%></span>
+            </label>
+          <% }); %>
         </div>
         <button class="add-shift mdl-button mdl-js-button mdl-js-ripple-effect">
           Add Shift
